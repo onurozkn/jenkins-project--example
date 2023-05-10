@@ -1,5 +1,5 @@
 FROM node:lts
-WORKDIR /app
+WORKDIR ../
 
 COPY package*.json ./
 
