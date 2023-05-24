@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment { 
-    DOCKERHUB_WRITE = credentials('geoanka-dockerhub')
+    DOCKERHUB_WRITE = credentials('arezdiez-dockerhub')
     DOCKERHUB_READ = credentials('jenkins-read')
   }
   stages {
