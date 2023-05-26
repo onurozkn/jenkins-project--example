@@ -2,7 +2,7 @@ FROM node:lts
 WORKDIR ./
 
 COPY backend/ .
-COPY frontend/dist ./public
+COPY frontend/ .
 
 
 EXPOSE 3000
