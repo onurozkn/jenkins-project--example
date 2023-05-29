@@ -1,5 +1,5 @@
 FROM node:lts
-WORKDIR /var/jenkins_home/workspace/
+WORKDIR /var/jenkins_home/workspace/jenkins-project-example_main@tmp
 USER root
 COPY package*.json ./
 
