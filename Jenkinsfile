@@ -15,22 +15,22 @@ pipeline {
             stage('Build Projects') {
               steps {
                 echo 'build is starting...'
-                sh "chmod +x -R ${env.WORKSPACE}"
-                sh './jenkins/build/build-main.sh'
+                echo "chmod +x -R ${env.WORKSPACE}"
+                echo './jenkins/build/build-main.sh'
                 echo 'build is success'
               }
             }
             stage('Build Images And Registery') {
               steps {
                 echo 'Preparing images...'
-                sh './jenkins/registry/registry-main.sh'
+                echo './jenkins/registry/registry-main.sh'
                 echo 'Images Pushed'
               }
             }
             stage('Update Server services.') {
               steps {
                 echo 'Update is starting...'
-                sh './jenkins/update/update-main.sh'
+                echo './jenkins/update/update-main.sh'
                 echo 'Update is success.'
               }
             }
