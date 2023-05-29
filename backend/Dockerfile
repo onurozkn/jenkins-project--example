@@ -1,6 +1,6 @@
 FROM node:lts
 
-WORKDIR /home/node/app
+WORKDIR /var/jenkins_home/workspace/
 USER root
 ADD package.json package.json
 COPY . .
