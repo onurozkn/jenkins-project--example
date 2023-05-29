@@ -1,5 +1,5 @@
 FROM node:lts
-WORKDIR ./
+WORKDIR /home/node/app
 
 COPY backend/ .
 COPY frontend/ .
