@@ -1,6 +1,6 @@
 FROM node:lts
 WORKDIR /home/node/app
-
+USER root
 COPY package*.json ./
 
 
