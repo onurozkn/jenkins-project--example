@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent none
   environment { 
     DOCKERHUB_WRITE = credentials('arezdiez')
     DOCKERHUB_READ = credentials('jenkins-read')
@@ -15,7 +15,7 @@ pipeline {
             stage('Build Projects') {
               steps {
                 echo 'build is starting...'
-                dir("${env.WORKSPACE}@tmp":./)
+                dir("${env.WORKSPACE}@tmp")
                 sh './jenkins/build/build-main.sh'
                 echo 'build is success'
               }
