@@ -1,6 +1,7 @@
 FROM node:lts
+run apt update
 
-WORKDIR /var/jenkins_home/workspace/jenkins-project-example_main@tmp
+WORKDIR ./
 USER root
 ADD package.json package.json
 COPY . .
