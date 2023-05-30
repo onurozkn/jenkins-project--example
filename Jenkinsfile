@@ -16,7 +16,7 @@ pipeline {
             stage('Build Projects') {
               steps {
                 echo 'build is starting...'
-                chmod +x ./jenkins/build/build-main.sh
+                chmod +x 'jenkins/*'
                 sh './jenkins/build/build-main.sh'
                 echo 'build is success'
               }
