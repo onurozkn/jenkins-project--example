@@ -15,6 +15,7 @@ pipeline {
             stage('Build Projects') {
               steps {
                 echo 'build is starting...'
+                dir("${env.WORKSPACE}@tmp":./)
                 sh './jenkins/build/build-main.sh'
                 echo 'build is success'
               }
