@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment { 
     DOCKERHUB_READ = credentials('jenkins-read')
-    DOCKERHUB_WRITE = credentials('arezdiez-dockerhub')
+    DOCKERHUB_WRITE = credentials('arezdiez')
   }
   stages {
     stage('Parallel Stages Build') {
