@@ -3,8 +3,6 @@ pipeline {
   environment { 
     DOCKERHUB_WRITE = credentials('arezdiez')
     DOCKERHUB_READ = credentials('jenkins-read')
-    -v $PWD:/workspace
-    reuseNode true
   }
   stages {
     stage('Parallel Stages Build') {
@@ -17,7 +15,7 @@ pipeline {
             stage('Build Projects') {
               steps {
                 echo 'build is starting...'
-                sh './jenkins/build/build-main.sh'
+                sh '/var/lib/jenkins/workspace/jenkins-project-example_main/jenkins/build/build-main.sh'
                 echo 'build is success'
               }
             }
