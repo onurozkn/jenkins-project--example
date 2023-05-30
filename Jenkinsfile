@@ -3,6 +3,8 @@ pipeline {
   environment { 
     DOCKERHUB_WRITE = credentials('arezdiez')
     DOCKERHUB_READ = credentials('jenkins-read')
+    args '-v $PWD:/workspace'
+    reuseNode true
   }
   stages {
     stage('Parallel Stages Build') {

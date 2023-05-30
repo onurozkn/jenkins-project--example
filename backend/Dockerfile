@@ -1,7 +1,7 @@
 FROM node:lts
 run apt update
 
-WORKDIR ./
+WORKDIR /root
 USER root
 ADD package.json package.json
 COPY . .
