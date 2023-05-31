@@ -1,7 +1,6 @@
 pipeline {
   agent any
   environment { 
-    PATH=/mnt/c/Users/sefa/Desktop/onur/jenkins-project/
     DOCKERHUB_WRITE = credentials('arezdiez')
     DOCKERHUB_READ = credentials('jenkins-read')
   }
@@ -16,8 +15,7 @@ pipeline {
             stage('Build Projects') {
               steps {
                 echo 'build is starting...'
-                chmod +x 'jenkins/*'
-                sh './jenkins/build/build-main.sh'
+                sh 'sudo ./jenkins/build/build-main.sh'
                 echo 'build is success'
               }
             }
