@@ -15,7 +15,7 @@ pipeline {
             stage('Build Projects') {
               steps {
                 echo 'build is starting...'
-                bat './jenkins/build/build-main.sh'
+                bat '/jenkins/build/build-main.sh'
                 echo 'build is success'
               }
             }
