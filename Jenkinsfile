@@ -15,21 +15,21 @@ pipeline {
             stage('Build Projects') {
               steps {
                 echo 'build is starting...'
-                bat '/jenkins/build/build-main.sh'
+                /* sh './jenkins/build/build-main.sh' */
                 echo 'build is success'
               }
             }
             stage('Build Images And Registery') {
               steps {
                 echo 'Preparing images...'
-                bat './jenkins/registry/registry-main.sh'
+                /* sh './jenkins/registry/registry-main.sh' */
                 echo 'Images Pushed'
               }
             }
             stage('Update Server services.') {
               steps {
                 echo 'Update is starting...'
-                bat './jenkins/update/update-main.sh'
+                /* sh './jenkins/update/update-main.sh' */
                 echo 'Update is success.'
               }
             }
