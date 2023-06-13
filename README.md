@@ -1,4 +1,6 @@
-﻿# jenkins-project--example
+[![Lint Code Base](https://github.com/bretfisher/docker-ci-automation/actions/workflows/call-super-linter.yaml/badge.svg)](https://github.com/onurozkn/jenkins-project-example/actions/workflows/docker-image.yml)
+
+# jenkins-project--example
 
 ## Jenkins Stages
 
