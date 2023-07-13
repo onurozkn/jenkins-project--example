@@ -10,12 +10,8 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
-
 stages:
 - stage: Build
-- task: ContainerBuild@0
-  inputs:
-    Dockerfile: 'Dockerfile'
   displayName: Build image
   jobs:
   - job: Build
@@ -30,3 +26,7 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
+    - task: ContainerBuild@0
+  inputs:
+    Dockerfile: 'Dockerfile'
+      
