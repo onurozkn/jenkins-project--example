@@ -27,6 +27,6 @@ stages:
         tags: |
           $(tag)
     - task: ContainerBuild@0
-  inputs:
-    Dockerfile: 'Dockerfile'
+      inputs:
+        Dockerfile: 'Dockerfile'
       
