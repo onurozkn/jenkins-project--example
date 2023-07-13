@@ -13,6 +13,9 @@ variables:
 
 stages:
 - stage: Build
+- task: ContainerBuild@0
+  inputs:
+    Dockerfile: 'Dockerfile'
   displayName: Build image
   jobs:
   - job: Build
