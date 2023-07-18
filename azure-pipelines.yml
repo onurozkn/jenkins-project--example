@@ -27,10 +27,8 @@ stages:
       inputs:
         Dockerfile: 'Dockerfile'
     
-    - task: Kubernetes@1
+    - task: KubernetesManifest@1
       inputs:
-        connectionType: 'Kubernetes Service Connection'
-        command: 'create'
-        secretType: 'dockerRegistry'
-        containerRegistryType: 'Azure Container Registry'
+        action: 'scale'
+        connectionType: 'kubernetesServiceConnection'
       
