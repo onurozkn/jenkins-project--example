@@ -1,13 +1,4 @@
 # Docker
-- task: Kubernetes@1
-  inputs:
-    connectionType: 'Kubernetes Service Connection'
-    command: 'create'
-    secretType: 'dockerRegistry'
-    containerRegistryType: 'Azure Container Registry'
-# Build a Docker image
-# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
-
 trigger:
 - main
 
@@ -35,4 +26,11 @@ stages:
     - task: ContainerBuild@0
       inputs:
         Dockerfile: 'Dockerfile'
+    
+    - task: Kubernetes@1
+      inputs:
+        connectionType: 'Kubernetes Service Connection'
+        command: 'create'
+        secretType: 'dockerRegistry'
+        containerRegistryType: 'Azure Container Registry'
       
