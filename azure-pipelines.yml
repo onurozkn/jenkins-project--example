@@ -27,8 +27,4 @@ stages:
       inputs:
         Dockerfile: 'Dockerfile'
     
-    - task: KubernetesManifest@1
-      inputs:
-        action: 'scale'
-        connectionType: 'kubernetesServiceConnection'
       
