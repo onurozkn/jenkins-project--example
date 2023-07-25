@@ -1,5 +1,6 @@
 #!/bin/bash
 #Sleep yerleştirildi : Pull ve update işlemlerini aynı anda yaptığı için patlıyor. | TR
+
 echo "First is first, login docker !"
 echo $DOCKERHUB_READ_PSW | docker login -u $DOCKERHUB_READ_USR --password-stdin
 
